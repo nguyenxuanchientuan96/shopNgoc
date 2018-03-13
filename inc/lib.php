@@ -10,7 +10,7 @@
 		//db config 
 	$host = "localhost";
 	$db_username = "root";
-	$db_password = "root"; 
+	$db_password = ""; 
 	$db_name = "vpp"; //database name
 		//end db config 
 $hien_loi = false; // hien thi thong bao loi : true / false

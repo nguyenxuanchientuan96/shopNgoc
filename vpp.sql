@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: May 02, 2017 at 05:32 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th3 13, 2018 lúc 04:33 AM
+-- Phiên bản máy phục vụ: 10.1.30-MariaDB
+-- Phiên bản PHP: 5.6.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `vpp`
+-- Cơ sở dữ liệu: `vpp`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `config`
+-- Cấu trúc bảng cho bảng `config`
 --
 
 CREATE TABLE `config` (
@@ -33,7 +35,7 @@ CREATE TABLE `config` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `config`
+-- Đang đổ dữ liệu cho bảng `config`
 --
 
 INSERT INTO `config` (`id`, `k`, `v`) VALUES
@@ -45,7 +47,7 @@ INSERT INTO `config` (`id`, `k`, `v`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lienhe`
+-- Cấu trúc bảng cho bảng `lienhe`
 --
 
 CREATE TABLE `lienhe` (
@@ -58,7 +60,7 @@ CREATE TABLE `lienhe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `lienhe`
+-- Đang đổ dữ liệu cho bảng `lienhe`
 --
 
 INSERT INTO `lienhe` (`id`, `ten`, `diachi`, `email`, `sdt`, `content`) VALUES
@@ -70,7 +72,7 @@ INSERT INTO `lienhe` (`id`, `ten`, `diachi`, `email`, `sdt`, `content`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `menu`
+-- Cấu trúc bảng cho bảng `menu`
 --
 
 CREATE TABLE `menu` (
@@ -80,20 +82,19 @@ CREATE TABLE `menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `menu`
+-- Đang đổ dữ liệu cho bảng `menu`
 --
 
 INSERT INTO `menu` (`id`, `name`, `info`) VALUES
-(8, 'TẬP VỞ', 'Vở là tập giấy được đóng lại dùng để để viết lên. Vở thường có bìa bọc ngoài để bảo vệ.'),
-(9, 'Bút', ' Là dụng cụ dùng mực ghi trên bề mặt, thông thường bề mặt giấy. Công dụng của bút là để viết hoặc vẽ.'),
-(10, 'DỤNG CỤ HỌC SINH', ' (mực, ngòi bút bi-gel, tẩy chì, gọt bút chì, thước kẻ, màu vẽ, nhãn vở, giấy thủ công, hồ dán, giấy ktra, giấy vẽ A4-A3 …, túi tài liệu)'),
-(11, 'ĐỒ DÙNG VĂN PHÒNG', 'Đồ dùng trong văn phòng'),
-(12, 'Đồ lưu niệm', 'Đồ lưu niệm, kỷ niệm');
+(13, 'Đầm xinh', 'Đầm'),
+(14, 'Váy', 'VáyVáyVáyVáyVáy'),
+(15, 'Quần Âu', 'Quần ÂuQuần ÂuQuần Âu'),
+(16, 'Áo khoác', 'Áo khoác');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sp`
+-- Cấu trúc bảng cho bảng `sp`
 --
 
 CREATE TABLE `sp` (
@@ -107,16 +108,16 @@ CREATE TABLE `sp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `sp`
+-- Đang đổ dữ liệu cho bảng `sp`
 --
 
 INSERT INTO `sp` (`id`, `menu`, `avatar`, `name`, `info`, `excerpt`, `price`) VALUES
-(14, 8, 'betapto.jpg', 'Vở bé tập tô', '<p><span class=\"irc_su\" dir=\"ltr\" style=\"text-align: left;\">Một hoạt động học m&agrave; chơi, chơi m&agrave; học bổ &iacute;ch như vẽ tranh, t&ocirc; m&agrave;u sẽ khiến b&eacute; cảm thấy th&iacute;ch th&uacute; v&agrave; tăng th&ecirc;m say m&ecirc;, hứng khởi học tập.</span></p>', '<p><span class=\"irc_su\" dir=\"ltr\" style=\"text-align: left;\"><span class=\"irc_iis\"><a class=\"_Epb irc_tas i3598\" tabindex=\"0\" href=\"https://bibomart.com.vn/vo-tap-to-cho-be-p47753.html\" target=\"_blank\" rel=\"noopener noreferrer\" data-noload=\"\" data-ved', '9500');
+(15, 13, 'ngoc.jpg', 'Bộ thể thao', '<p>L&agrave; bộ kết hợp phong c&aacute;ch trẻ trung hiện đại, tinh nghịch, ph&ugrave; hợp với những bạn năng động</p>', '', '200000');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `thanhtoan`
+-- Cấu trúc bảng cho bảng `thanhtoan`
 --
 
 CREATE TABLE `thanhtoan` (
@@ -129,7 +130,7 @@ CREATE TABLE `thanhtoan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `thanhtoan`
+-- Đang đổ dữ liệu cho bảng `thanhtoan`
 --
 
 INSERT INTO `thanhtoan` (`id`, `ten`, `diachi`, `sdt`, `email`, `status`) VALUES
@@ -141,12 +142,13 @@ INSERT INTO `thanhtoan` (`id`, `ten`, `diachi`, `sdt`, `email`, `status`) VALUES
 (6, 'tuan', 'Thanh Hoa', '01666665545', 'chientuan084@gmail.com', 0),
 (7, 'vbhvbhbh', 'bhdbhbhbhb', '545455', 'chientuan084@gmail.com', 0),
 (8, 'ggyhgyg', 'ygygy', '554545454', 'chientuan084@gmail.com', 0),
-(9, 'dffghbgf', 'Ha Noi', '0989765049', 'chientuan084@gmail.com', 0);
+(9, 'dffghbgf', 'Ha Noi', '0989765049', 'chientuan084@gmail.com', 0),
+(10, 'tuan', 'tuan', '01646562678', 'ngoc@gmail.com', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Cấu trúc bảng cho bảng `user`
 --
 
 CREATE TABLE `user` (
@@ -157,89 +159,95 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `user`
+-- Đang đổ dữ liệu cho bảng `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `info`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Bờ la bờ lô bờ la là ra bờ ao\r\n'),
-(2, 'cuong', 'cf4d87e50be6390ee9bd8ad6e7498cae', 'day la cuong\r\n');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Bờ la bờ lô bờ la là ra bờ ao\r\n');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `config`
+-- Chỉ mục cho bảng `config`
 --
 ALTER TABLE `config`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `k` (`k`);
 
 --
--- Indexes for table `lienhe`
+-- Chỉ mục cho bảng `lienhe`
 --
 ALTER TABLE `lienhe`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `menu`
+-- Chỉ mục cho bảng `menu`
 --
 ALTER TABLE `menu`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sp`
+-- Chỉ mục cho bảng `sp`
 --
 ALTER TABLE `sp`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `thanhtoan`
+-- Chỉ mục cho bảng `thanhtoan`
 --
 ALTER TABLE `thanhtoan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Chỉ mục cho bảng `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `config`
+-- AUTO_INCREMENT cho bảng `config`
 --
 ALTER TABLE `config`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
--- AUTO_INCREMENT for table `lienhe`
+-- AUTO_INCREMENT cho bảng `lienhe`
 --
 ALTER TABLE `lienhe`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
--- AUTO_INCREMENT for table `menu`
+-- AUTO_INCREMENT cho bảng `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 --
--- AUTO_INCREMENT for table `sp`
+-- AUTO_INCREMENT cho bảng `sp`
 --
 ALTER TABLE `sp`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
 --
--- AUTO_INCREMENT for table `thanhtoan`
+-- AUTO_INCREMENT cho bảng `thanhtoan`
 --
 ALTER TABLE `thanhtoan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

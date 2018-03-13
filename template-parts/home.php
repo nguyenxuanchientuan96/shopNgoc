@@ -8,7 +8,12 @@
 					echo $sidebar;
 				}
 			?> -->	
-			<div class="body-left-menu">
+			<div class="body-left-menu" style="background: white !important">
+				<style type="text/css">
+					.body-left-menu ul li{
+
+					}
+				</style>
 				<ul>
 					<li><a href="index.php?r=home" title="home">TRANG CHỦ</a></li>
 					<li><a href="#" title="gioithieu">GIỚI THIỆU</a></li>
@@ -23,7 +28,7 @@
 				<?php endwhile;?>
 
 				<li><a href="index.php?r=about" title="lienhe">LIÊN HỆ</a></li>	
-				<li><a href="admin">ĐĂNG NHẬP QUẢN TRỊ</a></li>
+		
 			</ul>
 			</div>
 		</div>
@@ -38,7 +43,7 @@
 			<div class="body-main" style="width: 80% !important;float: left;">
 			
 				<div id="banner-main">
-					<?php echo get_config("banner-main");  ?>
+					<img src="img/ngoc.jpg">
 				</div>
 
 

@@ -13,6 +13,6 @@
 	<script src="plugins/hienAnh/jquery.prettyPhoto.js"></script>
 	<script src="plugins/tinymce/tinymce.min.js"></script>
 	<script src="js/custom.js"></script>
-	<?php echo("<script>window.homeUrl = '{$home_url}'</script>");  ?>
+	
 
 </head>

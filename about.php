@@ -114,10 +114,7 @@
 	
 
 	<p>
-		© Công ty TNHH văn phòng phẩm TLT- All Rights Reserved.
-Địa chỉ: Công ty TNHH văn phòng phẩm TLT - 456 Minh Khai -Hai Bà Trưng - Hà Nội </p>
-<p> 
-Điện thoại: 0989765049 - Gmail: chientuan084@gmail.com
+		
 	</p>
 
 
